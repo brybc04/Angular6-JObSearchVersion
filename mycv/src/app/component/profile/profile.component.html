@@ -1,0 +1,73 @@
+
+<div *ngIf="user" class="card mb-3" >
+  <h3 class="card-header"><b>{{user.name | uppercase}}</b> <button *ngIf="!submitted"  (click)="submitted = true" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">Edit</span>
+  </button> </h3>
+  <div class="card-body">
+    <h5 class="card-title">Username:<b> {{user.username}}</b></h5>
+    <h5 class="card-title">Email: <b>{{user.email}}</b></h5>
+    <h5 class="card-title">Location: <b>{{user.address}}</b></h5>
+  </div>
+
+  <form #editContactList (ngSubmit)="editUser(user._id, user._name, user._username,email, user._password, user._address)"
+    *ngIf="submitted">
+  
+    <b>Name: </b> <input type="text" name="name" [(ngModel)]="user.name" /><br>
+    <b>Username:</b> <input type="text" name="username" [(ngModel)]="user.username" /><br>
+    <b>Email:</b> <input type="text" name="email" [(ngModel)]="user.email" /><br>
+    <b>Location:</b> <input type="text" name="address" [(ngModel)]="user.address" /><br>
+    <button>Submit</button>
+  </form>
+
+
+</div>
+
+<div  class="card mb-3">
+  <h4 class="card-header"><b>Main Skills</b>  <button *ngIf="!submitted"  (click)="submitted = true" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">Edit</span>
+  </button></h4>
+  <div class="card-body">
+    <h5 class="card-title"> {{user.mainSkills}} </h5><br>
+  </div>
+   <form #editContactList (ngSubmit)="editUser( user._mainSkills)"
+    *ngIf="submitted">
+  
+    <b></b> <input type="text" name="mainSkills" [(ngModel)]="user.mainSkills" /><br>
+
+    <button>Submit</button>
+  </form>
+</div>
+
+
+  <div class="card mb-3">
+    <h4 class="card-header"><b>Work Experience  <button *ngIf="!submitted"  (click)="submitted = true" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">Edit</span>
+    </button></b></h4>
+    <div class="card-body">
+      <h5 class="card-title"> {{user.workExperience}}</h5><br>
+    </div>
+       <form #editContactList (ngSubmit)="editUser( user.workExperience)"
+    *ngIf="submitted">
+  
+    <b></b> <input type="text" name="workExperience" [(ngModel)]="user.workExperience" /><br>
+
+    <button>Submit</button>
+  </form>
+  </div>
+
+    <div class="card mb-3">
+      <h4 class="card-header"><b>Education</b> <button *ngIf="!submitted"  (click)="submitted = true" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">Edit</span>
+      </button></h4>
+      <div class="card-body">
+        <h5 class="card-title">{{user.education}}</h5><br>
+      </div>
+            <form #editContactList (ngSubmit)="editUser( user.education)"
+    *ngIf="submitted">
+  
+    <b></b> <input type="text" name="education" [(ngModel)]="user.education" /><br>
+
+    <button>Submit</button>
+  </form>
+
+</div>

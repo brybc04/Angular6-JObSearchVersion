@@ -1,0 +1,50 @@
+<h3 > <B>Register</B></h3><BR>
+<form (submit)="onRegisterSubmit()">
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text"  [(ngModel)]="name" name="name" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" [(ngModel)]="username" name="username" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" [(ngModel)]="email" name="email" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+     <input type="password" [(ngModel)]="password" name="password" class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="comment">Address </label>
+      <textarea type="text" [(ngModel)]="address" name="address" class="form-control" id="comment" rows="2"></textarea>
+  </div>
+
+        <div class="form-group">
+          <label for="comment">Main Skills </label>
+          <textarea type="text" [(ngModel)]="mainSkills" name="mainSkills" class="form-control" id="comment" rows="5"></textarea>
+        </div>
+
+    <div class="form-group">
+      <label for="comment">Work Experience </label>
+      <textarea type="text" [(ngModel)]="workExperience" name="workExperience" class="form-control" id="comment" rows="5"></textarea>
+    </div>
+
+      <div class="form-group">
+        <label for="comment">Education </label>
+        <textarea type="text" [(ngModel)]="education" name="education" class="form-control" id="comment" rows="5"></textarea>
+      </div>
+
+
+
+<input type="submit" class="btn btn-primary" value="SUBMIT">
+
+
+</form>
+
+<br><br>

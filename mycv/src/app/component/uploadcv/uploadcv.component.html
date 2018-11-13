@@ -1,0 +1,27 @@
+ <h3 > <B>Create Your CV</B></h3><BR>
+<form #skillsForm (submit)="onRegisterCV()">
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">Main Skill</label>
+  <textarea class="form-control" name="mainSkills"  type="text" [(ngModel)]="mainSkills"  id="exampleFormControlTextarea1"
+    rows="3" required></textarea>
+
+</div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Work Experience</label>
+    <textarea class="form-control" name="workExperience"  type="text"  [(ngModel)]="workExperience"  id="exampleFormControlTextarea1" rows="4" required></textarea>
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Education</label>
+    <textarea class="form-control" name="education"  type="text"  [(ngModel)]="education"  id="exampleFormControlTextarea1" rows="3" required></textarea>
+
+  </div>
+
+
+<button type="submit" class="btn btn-primary" > SUBMIT</button>
+
+</form>
+
